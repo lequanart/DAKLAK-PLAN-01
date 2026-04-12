@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đắk Lắk — Hành Trình Nghiên Cứu Dệt Thổ Cẩm Ê Đê</title>
+    <meta name="description" content="Lịch trình 2 ngày nghiên cứu nghề dệt thổ cẩm truyền thống của người Ê Đê tại Buôn Ma Thuột, Đắk Lắk">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Notion-style Sidebar (right) -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-toggle" id="sidebarToggle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </div>
+        <div class="sidebar-content" id="sidebarContent">
+            <div class="sidebar-label">MỤC LỤC</div>
+            <a href="#hero" class="sidebar-link active" data-section="hero">
+                <span class="sidebar-dot"></span>Tổng quan
+            </a>
+            <a href="#stats" class="sidebar-link" data-section="stats">
+                <span class="sidebar-dot"></span>Thông số
+            </a>
+            <a href="#overview" class="sidebar-link" data-section="overview">
+                <span class="sidebar-dot"></span>Về chuyến đi
+            </a>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-label">NGÀY 1 — THỨ SÁU</div>
+            <a href="#d1-arrival" class="sidebar-link" data-section="d1-arrival">
+                <span class="sidebar-dot"></span>07:00 Đến BMT
+            </a>
+            <a href="#d1-byahoa" class="sidebar-link" data-section="d1-byahoa">
+                <span class="sidebar-dot"></span>08:30 Bya Hoa
+            </a>
+            <a href="#d1-museum" class="sidebar-link" data-section="d1-museum">
+                <span class="sidebar-dot"></span>10:30 Bảo tàng
+            </a>
+            <a href="#d1-akodhong" class="sidebar-link" data-section="d1-akodhong">
+                <span class="sidebar-dot"></span>13:30 Akô Dhông
+            </a>
+            <a href="#d1-coffee" class="sidebar-link" data-section="d1-coffee">
+                <span class="sidebar-dot"></span>15:30 Cà Phê
+            </a>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-label">NGÀY 2 — THỨ BẢY</div>
+            <a href="#d2-tongju" class="sidebar-link" data-section="d2-tongju">
+                <span class="sidebar-dot"></span>08:00 HTX Tơng Jú
+            </a>
+            <a href="#d2-buffer" class="sidebar-link" data-section="d2-buffer">
+                <span class="sidebar-dot"></span>13:30 Mua sắm
+            </a>
+            <a href="#d2-depart" class="sidebar-link" data-section="d2-depart">
+                <span class="sidebar-dot"></span>18:30 Về Nha Trang
+            </a>
+            <div class="sidebar-divider"></div>
+            <a href="#budget" class="sidebar-link" data-section="budget">
+                <span class="sidebar-dot"></span>Ngân sách
+            </a>
+            <a href="#checklist" class="sidebar-link" data-section="checklist">
+                <span class="sidebar-dot"></span>Checklist
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="images/hero_new.png" alt="Buôn Ma Thuột" loading="eager">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">NGHIÊN CỨU THỰC ĐỊA · 2 NGÀY</div>
+            <h1 class="hero-title">
+                <span class="hero-line1">Dệt Thổ Cẩm</span>
+                <span class="hero-line2">Ê Đê</span>
+            </h1>
+            <p class="hero-location">Buôn Ma Thuột — Đắk Lắk</p>
+            <div class="hero-chips">
+                <span class="chip">🏍️ Xe máy</span>
+                <span class="chip">📍 5 điểm đến</span>
+                <span class="chip">👥 2 người</span>
+                <span class="chip">💰 2.5M₫</span>
+            </div>
+            <a href="#stats" class="hero-cta">
+                Khám phá lịch trình
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Horizontal Timeline Overview Bar -->
+    <section class="htl-bar" id="htlBar">
+        <div class="htl-track" id="htlTrack">
+            <!-- Day 1 -->
+            <div class="htl-day-label">NGÀY 1 — THỨ SÁU</div>
+            <a href="#d1-arrival" class="htl-stop" data-section="d1-arrival">
+                <div class="htl-stop-time">07:00</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">Đến BMT</div>
+            </a>
+            <div class="htl-connector"></div>
+            <a href="#d1-byahoa" class="htl-stop htl-stop-important" data-section="d1-byahoa">
+                <div class="htl-stop-time">08:30</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">Bya Hoa</div>
+                <div class="htl-stop-dur">2h</div>
+            </a>
+            <div class="htl-connector"></div>
+            <a href="#d1-museum" class="htl-stop htl-stop-important" data-section="d1-museum">
+                <div class="htl-stop-time">10:30</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">Bảo tàng</div>
+                <div class="htl-stop-dur">2h</div>
+            </a>
+            <div class="htl-connector htl-connector-short"></div>
+            <a href="#d1-akodhong" class="htl-stop" data-section="d1-akodhong">
+                <div class="htl-stop-time">13:30</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">Akô Dhông</div>
+                <div class="htl-stop-dur">2h</div>
+            </a>
+            <div class="htl-connector"></div>
+            <a href="#d1-coffee" class="htl-stop" data-section="d1-coffee">
+                <div class="htl-stop-time">15:30</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">Cà Phê</div>
+                <div class="htl-stop-dur">2h</div>
+            </a>
+
+            <!-- Day separator -->
+            <div class="htl-day-sep">
+                <span>🌄</span>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="htl-day-label htl-day2-label">NGÀY 2 — THỨ BẢY</div>
+            <a href="#d2-tongju" class="htl-stop htl-stop-primary" data-section="d2-tongju">
+                <div class="htl-stop-time">08:00</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">HTX Tơng Jú</div>
+                <div class="htl-stop-dur">4h ⭐</div>
+            </a>
+            <div class="htl-connector htl-connector-gold"></div>
+            <a href="#d2-buffer" class="htl-stop" data-section="d2-buffer">
+                <div class="htl-stop-time">13:30</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">Mua sắm</div>
+                <div class="htl-stop-dur">3h</div>
+            </a>
+            <div class="htl-connector"></div>
+            <a href="#d2-depart" class="htl-stop" data-section="d2-depart">
+                <div class="htl-stop-time">18:30</div>
+                <div class="htl-stop-dot"></div>
+                <div class="htl-stop-name">→ Nha Trang</div>
+            </a>
+            <div class="htl-end-cap"></div>
+        </div>
+        <!-- Drag hint -->
+        <div class="htl-hint" id="htlHint">← kéo ngang để xem →</div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Ngày nghiên cứu thực địa tại Buôn Ma Thuột</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Điểm đến từ bảo tàng, buôn làng đến HTX dệt</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4h</div>
+                    <div class="stat-label">Dành riêng cho HTX Tơng Jú — điểm nghiên cứu chính</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2.5M</div>
+                    <div class="stat-label">Tổng ngân sách cho 2 người bao gồm di chuyển & ăn ở</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview" id="overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-text">
+                    <div class="section-tag">Về chuyến đi</div>
+                    <h2 class="section-title">Nghiên cứu nghề dệt truyền thống Ê Đê</h2>
+                    <p class="section-desc">
+                        Chuyến nghiên cứu thực địa 2 ngày tại <strong>Buôn Ma Thuột</strong>, tập trung tìm hiểu nghề dệt thổ cẩm truyền thống của người <strong>Ê Đê</strong> — từ các HTX dệt, CLB bảo tồn, đến bảo tàng và thương hiệu thổ cẩm đương đại.
+                    </p>
+                    <p class="section-desc">
+                        Lịch trình được tối ưu theo tuyến đường xe máy, ưu tiên phỏng vấn chuyên sâu tại <strong>HTX Tơng Jú</strong> và thương hiệu <strong>Bya Hoa</strong>.
+                    </p>
+                </div>
+                <div class="overview-image">
+                    <img src="images/textiles.png" alt="Thổ cẩm Ê Đê">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================== -->
+    <!-- NGÀY 1                          -->
+    <!-- =============================== -->
+    <section class="day-section" id="day1">
+        <div class="container">
+            <div class="day-header">
+                <div class="day-chip day1">NGÀY 1</div>
+                <h2 class="day-title">Thứ Sáu</h2>
+                <p class="day-desc">Bya Hoa · Bảo tàng · Buôn Akô Dhông · Cà Phê</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+
+                <!-- 07:00 -->
+                <div class="timeline-item" id="d1-arrival">
+                    <div class="tl-time-col">
+                        <div class="tl-time">07:00</div>
+                        <div class="tl-duration">1.5h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact">
+                            <div class="tl-icon">✈️</div>
+                            <div class="tl-body">
+                                <h3>Đến Buôn Ma Thuột</h3>
+                                <p>Sân bay BMT → Thuê xe máy → Check-in Song Anh Hotel. Ăn sáng phở/bún tại quán địa phương.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-transport">Di chuyển</span>
+                                    <span class="tag tag-logistics">Logistics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 08:30 -->
+                <div class="timeline-item" id="d1-byahoa">
+                    <div class="tl-time-col">
+                        <div class="tl-time">08:30</div>
+                        <div class="tl-duration">2h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-important"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-featured">
+                            <div class="tl-card-image">
+                                <img src="images/weaving.png" alt="Bya Hoa">
+                                <div class="tl-card-duration">~2 tiếng</div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-location">📍 Gần trung tâm BMT</div>
+                                <h3>Bya Hoa — Thổ Cẩm Đương Đại</h3>
+                                <p>Phỏng vấn chủ thương hiệu về hành trình kết hợp truyền thống và hiện đại. Tìm hiểu quy trình thiết kế, thị trường, câu chuyện bảo tồn.</p>
+                                <div class="tl-highlight">
+                                    <strong>🎯 Phỏng vấn:</strong> Góc nhìn doanh nghiệp xã hội — bảo tồn nghề dệt qua mô hình kinh doanh
+                                </div>
+                                <div class="tl-checklist">
+                                    <div class="check-item">☐ Phỏng vấn founder</div>
+                                    <div class="check-item">☐ Chụp sản phẩm & quy trình</div>
+                                    <div class="check-item">☐ Hỏi về nguồn nguyên liệu</div>
+                                </div>
+                                <div class="tl-tags">
+                                    <span class="tag tag-research">Nghiên cứu</span>
+                                    <span class="tag tag-interview">Phỏng vấn</span>
+                                    <span class="tag tag-star">⭐ Quan trọng</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10:30 -->
+                <div class="timeline-item" id="d1-museum">
+                    <div class="tl-time-col">
+                        <div class="tl-time">10:30</div>
+                        <div class="tl-duration">2h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-important"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-featured">
+                            <div class="tl-card-image">
+                                <img src="images/museum.png" alt="Bảo tàng Đắk Lắk">
+                                <div class="tl-card-duration">~2 tiếng</div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-location">📍 TP. Buôn Ma Thuột</div>
+                                <h3>Bảo tàng tỉnh Đắk Lắk</h3>
+                                <p>Nghiên cứu khu trưng bày thổ cẩm Ê Đê và M'nông. Quan sát khung dệt truyền thống, trang phục cổ. Nền tảng để hiểu nguồn gốc hoa văn.</p>
+                                <div class="tl-highlight">
+                                    <strong>🎯 Mục tiêu:</strong> Hiểu rõ nguồn gốc và cấu trúc hoa văn thổ cẩm Ê Đê
+                                </div>
+                                <div class="tl-checklist">
+                                    <div class="check-item">☐ Ghi chép cấu trúc khung dệt</div>
+                                    <div class="check-item">☐ Chụp chi tiết hoa văn</div>
+                                    <div class="check-item">☐ So sánh thổ cẩm Ê Đê vs M'nông</div>
+                                </div>
+                                <div class="tl-tags">
+                                    <span class="tag tag-research">Nghiên cứu</span>
+                                    <span class="tag tag-culture">Văn hóa</span>
+                                    <span class="tag tag-star">⭐ Quan trọng</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12:30 Lunch -->
+                <div class="timeline-item">
+                    <div class="tl-time-col">
+                        <div class="tl-time">12:30</div>
+                        <div class="tl-duration">1h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-small"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact">
+                            <div class="tl-icon">🍜</div>
+                            <div class="tl-body">
+                                <h3>Ăn trưa</h3>
+                                <p>Cơm lam, gà nướng, canh lá — đặc sản Tây Nguyên. Nghỉ ngơi chuẩn bị chiều.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-food">Ẩm thực</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13:30 -->
+                <div class="timeline-item" id="d1-akodhong">
+                    <div class="tl-time-col">
+                        <div class="tl-time">13:30</div>
+                        <div class="tl-duration">2h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-featured">
+                            <div class="tl-card-image">
+                                <img src="images/village.png" alt="Buôn Akô Dhông">
+                                <div class="tl-card-duration">~2 tiếng</div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-location">📍 TP. Buôn Ma Thuột</div>
+                                <h3>Buôn Akô Dhông</h3>
+                                <p>Làng cổ Ê Đê nổi tiếng ngay lòng thành phố. Tham quan nhà dài truyền thống, tìm hiểu văn hóa Ê Đê, quan sát hoạt động dệt.</p>
+                                <div class="tl-checklist">
+                                    <div class="check-item">☐ Chụp ảnh nhà dài & kiến trúc</div>
+                                    <div class="check-item">☐ Hỏi về vai trò dệt trong đời sống</div>
+                                    <div class="check-item">☐ Tìm nghệ nhân dệt tại buôn</div>
+                                </div>
+                                <div class="tl-tags">
+                                    <span class="tag tag-culture">Văn hóa</span>
+                                    <span class="tag tag-research">Nghiên cứu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 15:30 -->
+                <div class="timeline-item" id="d1-coffee">
+                    <div class="tl-time-col">
+                        <div class="tl-time">15:30</div>
+                        <div class="tl-duration">2h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-featured">
+                            <div class="tl-card-image">
+                                <img src="images/coffee.png" alt="Bảo tàng Cà Phê">
+                                <div class="tl-card-duration">~2 tiếng</div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-location">📍 TP. Buôn Ma Thuột</div>
+                                <h3>Bảo tàng Thế Giới Cà Phê</h3>
+                                <p>Thư giãn cuối ngày. Thưởng thức cà phê đặc sản, tìm hiểu văn hóa cà phê Tây Nguyên. Tổng hợp ghi chú nghiên cứu.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-culture">Văn hóa</span>
+                                    <span class="tag tag-relax">Nghỉ ngơi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Evening -->
+                <div class="timeline-item">
+                    <div class="tl-time-col">
+                        <div class="tl-time">18:00</div>
+                        <div class="tl-duration"></div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-small"></div>
+                        <div class="tl-line tl-line-end"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact">
+                            <div class="tl-icon">🌙</div>
+                            <div class="tl-body">
+                                <h3>Tối — Tổng hợp & Chuẩn bị</h3>
+                                <p>Ăn tối Tây Nguyên. Sắp xếp ảnh, chuẩn bị câu hỏi cho ngày 2 tại HTX Tơng Jú.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-food">Ẩm thực</span>
+                                    <span class="tag tag-logistics">Chuẩn bị</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Day Divider -->
+    <div class="day-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon">🌄</div>
+        <div class="divider-line"></div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- NGÀY 2                          -->
+    <!-- =============================== -->
+    <section class="day-section" id="day2">
+        <div class="container">
+            <div class="day-header">
+                <div class="day-chip day2">NGÀY 2</div>
+                <h2 class="day-title">Thứ Bảy</h2>
+                <p class="day-desc">HTX Tơng Jú · Mua sắm · Về Nha Trang</p>
+            </div>
+
+            <div class="timeline">
+
+                <!-- 07:00 -->
+                <div class="timeline-item">
+                    <div class="tl-time-col">
+                        <div class="tl-time">07:00</div>
+                        <div class="tl-duration">1h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-small"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact">
+                            <div class="tl-icon">☕</div>
+                            <div class="tl-body">
+                                <h3>Sáng — Cà phê & Chuẩn bị</h3>
+                                <p>Kiểm tra thiết bị ghi hình, pin, bộ nhớ. Xác nhận lịch hẹn HTX Tơng Jú.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-logistics">Chuẩn bị</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 08:00 - HIGHLIGHT -->
+                <div class="timeline-item" id="d2-tongju">
+                    <div class="tl-time-col">
+                        <div class="tl-time tl-time-primary">08:00</div>
+                        <div class="tl-duration tl-duration-primary">4h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-primary"></div>
+                        <div class="tl-line tl-line-primary"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-primary">
+                            <div class="tl-card-image">
+                                <img src="images/weaving.png" alt="HTX Tơng Jú">
+                                <div class="tl-card-duration tl-dur-primary">~4 tiếng</div>
+                                <div class="tl-card-badge">⭐ ĐIỂM CHÍNH</div>
+                            </div>
+                            <div class="tl-body">
+                                <div class="tl-location">📍 Buôn Tơng Jú, xã Ea Kao</div>
+                                <h3>HTX Dệt Thổ Cẩm Tơng Jú</h3>
+                                <p>Điểm nghiên cứu quan trọng nhất — HTX có tổ chức, nơi dệt thổ cẩm là nghề chính. Quan sát toàn bộ quy trình, phỏng vấn nghệ nhân, tìm hiểu mô hình bảo tồn.</p>
+                                <div class="tl-highlight tl-highlight-primary">
+                                    <strong>🎯 ĐÂY LÀ ĐIỂM QUAN TRỌNG NHẤT</strong><br>
+                                    Dệt thổ cẩm là nghề chính, có tổ chức HTX, dễ bắt gặp nghệ nhân đang dệt. Dành đủ thời gian tại đây.
+                                </div>
+                                <div class="tl-checklist">
+                                    <div class="check-item">☐ Quan sát quy trình dệt từ đầu đến cuối</div>
+                                    <div class="check-item">☐ Phỏng vấn nghệ nhân (kỹ thuật, hoa văn)</div>
+                                    <div class="check-item">☐ Phỏng vấn ban quản lý HTX</div>
+                                    <div class="check-item">☐ Quay video quy trình dệt</div>
+                                    <div class="check-item">☐ Chụp chi tiết khung dệt & nguyên liệu</div>
+                                    <div class="check-item">☐ Hỏi về ý nghĩa các hoa văn</div>
+                                </div>
+                                <div class="tl-tags">
+                                    <span class="tag tag-star">⭐⭐ Quan trọng nhất</span>
+                                    <span class="tag tag-research">Nghiên cứu</span>
+                                    <span class="tag tag-interview">Phỏng vấn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12:00 -->
+                <div class="timeline-item">
+                    <div class="tl-time-col">
+                        <div class="tl-time">12:00</div>
+                        <div class="tl-duration">1.5h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot dot-small"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact">
+                            <div class="tl-icon">🍜</div>
+                            <div class="tl-body">
+                                <h3>Ăn trưa tại buôn</h3>
+                                <p>Ăn trưa gần Tơng Jú hoặc quay về trung tâm. Nghỉ ngắn, chỉnh lý ghi chép.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-food">Ẩm thực</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13:30 -->
+                <div class="timeline-item" id="d2-buffer">
+                    <div class="tl-time-col">
+                        <div class="tl-time">13:30</div>
+                        <div class="tl-duration">3h</div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact">
+                            <div class="tl-icon">🛍️</div>
+                            <div class="tl-body">
+                                <h3>Buffer / Mua sắm đặc sản</h3>
+                                <p>Thời gian dự phòng — quay lại các điểm nghiên cứu nếu cần, hoặc mua đặc sản Đắk Lắk. Thu dọn, trả xe máy.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-logistics">Logistics</span>
+                                    <span class="tag tag-relax">Tự do</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 18:30 -->
+                <div class="timeline-item" id="d2-depart">
+                    <div class="tl-time-col">
+                        <div class="tl-time">18:30</div>
+                        <div class="tl-duration"></div>
+                    </div>
+                    <div class="tl-dot-col">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line tl-line-end"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-card tl-card-compact tl-card-departure">
+                            <div class="tl-icon">🚌</div>
+                            <div class="tl-body">
+                                <h3>Xe giường nằm → Nha Trang</h3>
+                                <p>Kết thúc chuyến nghiên cứu. Tổng hợp ghi chép trên xe, nghỉ ngơi.</p>
+                                <div class="tl-tags">
+                                    <span class="tag tag-transport">Di chuyển</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Section -->
+    <section class="budget-section" id="budget">
+        <div class="container">
+            <div class="section-tag center">Ngân sách</div>
+            <h2 class="section-title center">Tổng chi phí cho 2 người</h2>
+            <div class="budget-grid">
+                <div class="budget-card">
+                    <div class="budget-icon">🏨</div>
+                    <div class="budget-name">Khách sạn</div>
+                    <div class="budget-amount">400,000₫</div>
+                    <div class="budget-note">1 đêm · Song Anh Hotel</div>
+                </div>
+                <div class="budget-card">
+                    <div class="budget-icon">🏍️</div>
+                    <div class="budget-name">Thuê xe máy</div>
+                    <div class="budget-amount">300,000₫</div>
+                    <div class="budget-note">2 ngày · 150k/ngày</div>
+                </div>
+                <div class="budget-card">
+                    <div class="budget-icon">⛽</div>
+                    <div class="budget-name">Xăng</div>
+                    <div class="budget-amount">100,000₫</div>
+                    <div class="budget-note">~50km di chuyển</div>
+                </div>
+                <div class="budget-card">
+                    <div class="budget-icon">🍜</div>
+                    <div class="budget-name">Ăn uống</div>
+                    <div class="budget-amount">600,000₫</div>
+                    <div class="budget-note">6 bữa · 2 người</div>
+                </div>
+                <div class="budget-card">
+                    <div class="budget-icon">🎟️</div>
+                    <div class="budget-name">Vé tham quan</div>
+                    <div class="budget-amount">200,000₫</div>
+                    <div class="budget-note">Bảo tàng + Cà phê</div>
+                </div>
+                <div class="budget-card">
+                    <div class="budget-icon">🚌</div>
+                    <div class="budget-name">Xe buýt về</div>
+                    <div class="budget-amount">500,000₫</div>
+                    <div class="budget-note">BMT → Nha Trang · 2 vé</div>
+                </div>
+            </div>
+            <div class="budget-total">
+                <span>Tổng cộng</span>
+                <span class="budget-total-amount">2,530,000₫</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Section -->
+    <section class="checklist-section" id="checklist">
+        <div class="container">
+            <div class="section-tag center">Chuẩn bị</div>
+            <h2 class="section-title center">Checklist mang theo</h2>
+            <div class="checklist-grid">
+                <div class="checklist-card">
+                    <h3>📷 Thiết bị</h3>
+                    <ul>
+                        <li>Camera / Điện thoại sạc đầy</li>
+                        <li>Pin dự phòng + sạc dự phòng</li>
+                        <li>Thẻ nhớ trống</li>
+                        <li>Chân máy nhỏ (nếu có)</li>
+                    </ul>
+                </div>
+                <div class="checklist-card">
+                    <h3>📝 Nghiên cứu</h3>
+                    <ul>
+                        <li>Sổ ghi chép + bút</li>
+                        <li>Danh sách câu hỏi phỏng vấn</li>
+                        <li>Máy ghi âm / app ghi âm</li>
+                        <li>Tài liệu tham khảo in sẵn</li>
+                    </ul>
+                </div>
+                <div class="checklist-card">
+                    <h3>🎒 Cá nhân</h3>
+                    <ul>
+                        <li>Kem chống nắng, mũ</li>
+                        <li>Nước uống, đồ ăn nhẹ</li>
+                        <li>Áo mưa (Tây Nguyên)</li>
+                        <li>Tiền mặt (vùng buôn ít ATM)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-brand">Đắk Lắk — Nghiên cứu Dệt Thổ Cẩm Ê Đê</p>
+            <p class="footer-note">Lịch trình 2 ngày · Thứ Sáu – Thứ Bảy · 2 người · Xe máy thuê</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Về đầu trang">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
