@@ -1319,51 +1319,106 @@ a {
 }
 
 @media (max-width: 768px) {
+    /* ---- Container ---- */
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    /* ---- Sidebar: move to bottom-left to avoid back-to-top clash ---- */
     .sidebar {
         top: auto;
         bottom: 16px;
-        right: 16px;
+        left: 16px;
+        right: auto;
         transform: none;
     }
 
     .sidebar-content {
         position: absolute;
         bottom: 50px;
-        right: 0;
+        left: 0;
+        right: auto;
         max-height: 50vh;
     }
 
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
+    /* ---- Back-to-top: keep bottom-right ---- */
+    .back-to-top {
+        bottom: 24px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
     }
 
+    /* ---- Stats ---- */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+    }
+
+    .stats {
+        padding: var(--space-2xl) 0 var(--space-xl);
+    }
+
+    /* ---- Overview ---- */
     .overview-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
 
     .overview-image {
         order: -1;
-        max-height: 250px;
+        max-height: 220px;
     }
 
+    .overview {
+        padding: var(--space-xl) 0 var(--space-2xl);
+    }
+
+    /* ---- Budget ---- */
     .budget-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
     }
 
+    .budget-total {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-sm);
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .budget-total-amount {
+        font-size: 1.3rem;
+    }
+
+    /* ---- Checklist ---- */
     .checklist-grid {
         grid-template-columns: 1fr;
     }
 
+    /* ---- Timeline: keep 3-col but shrink time-col ---- */
     .timeline-item {
-        grid-template-columns: 55px 24px 1fr;
+        grid-template-columns: 60px 24px 1fr;
+    }
+
+    .tl-time-col {
+        padding-right: 8px;
+        padding-top: 12px;
+        min-width: 0;
     }
 
     .tl-time {
-        font-size: 0.82rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .tl-time-primary {
+        font-size: 1.2rem;
     }
 
     .tl-duration {
-        font-size: 0.62rem;
+        font-size: 0.58rem;
+        padding: 3px 8px;
     }
 
     .tl-dot {
@@ -1371,8 +1426,53 @@ a {
         height: 12px;
     }
 
+    .tl-dot.dot-important {
+        width: 14px;
+        height: 14px;
+    }
+
+    .tl-dot.dot-primary {
+        width: 18px;
+        height: 18px;
+    }
+
+    .tl-dot-col {
+        padding-top: 14px;
+    }
+
     .tl-card-image {
         height: 160px;
+    }
+
+    .tl-body {
+        padding: var(--space-md) var(--space-md);
+    }
+
+    .tl-body h3 {
+        font-size: 1rem;
+    }
+
+    .tl-body p {
+        font-size: 0.82rem;
+    }
+
+    .tl-highlight {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.8rem;
+    }
+
+    .tl-card-compact {
+        padding: var(--space-sm) var(--space-md);
+        gap: var(--space-sm);
+    }
+
+    .tl-icon {
+        font-size: 1.4rem;
+    }
+
+    /* ---- Hero ---- */
+    .hero-content {
+        padding: var(--space-md);
     }
 
     .hero-chips {
@@ -1380,15 +1480,77 @@ a {
     }
 
     .chip {
-        font-size: 0.75rem;
-        padding: 4px 12px;
+        font-size: 0.72rem;
+        padding: 4px 10px;
+    }
+
+    .hero-cta {
+        font-size: 0.82rem;
+        padding: 10px 22px;
+    }
+
+    /* ---- Day sections ---- */
+    .day-section {
+        padding: var(--space-xl) 0 var(--space-2xl);
+    }
+
+    .day-header {
+        margin-bottom: var(--space-xl);
+    }
+
+    /* ---- Horizontal timeline bar ---- */
+    .htl-track {
+        padding: 0 var(--space-md);
+    }
+
+    .htl-bar {
+        padding: 20px 0 16px;
+    }
+
+    .htl-stop {
+        padding: 6px 8px;
+    }
+
+    .htl-stop-time {
+        font-size: 0.88rem;
+    }
+
+    .htl-stop-primary .htl-stop-time {
+        font-size: 0.95rem;
+    }
+
+    .htl-stop-name {
+        font-size: 0.62rem;
+    }
+
+    .htl-connector {
+        width: 24px;
+    }
+
+    .htl-connector-short {
+        width: 16px;
+    }
+
+    .htl-day-sep {
+        padding: 0 10px;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+        padding: var(--space-xl) 0;
+        padding-bottom: 80px; /* space for floating buttons */
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+
+    /* ---- Stats ---- */
     .stats-grid {
         grid-template-columns: 1fr 1fr;
-        gap: var(--space-sm);
+        gap: 8px;
     }
 
     .stat-card {
@@ -1396,18 +1558,149 @@ a {
     }
 
     .stat-number {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
+    .stat-label {
+        font-size: 0.72rem;
+    }
+
+    /* ---- Budget: single column on very small screens ---- */
     .budget-grid {
         grid-template-columns: 1fr 1fr;
+        gap: 8px;
     }
 
+    .budget-card {
+        padding: var(--space-md);
+    }
+
+    .budget-amount {
+        font-size: 0.95rem;
+    }
+
+    .budget-name {
+        font-size: 0.78rem;
+    }
+
+    /* ---- Timeline: even tighter ---- */
     .timeline-item {
-        grid-template-columns: 48px 20px 1fr;
+        grid-template-columns: 50px 18px 1fr;
     }
 
     .tl-time-col {
-        padding-right: 6px;
+        padding-right: 4px;
+    }
+
+    .tl-time {
+        font-size: 0.95rem;
+    }
+
+    .tl-time-primary {
+        font-size: 1.05rem;
+    }
+
+    .tl-duration {
+        font-size: 0.52rem;
+        padding: 2px 6px;
+    }
+
+    .tl-dot {
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
+
+    .tl-dot.dot-important {
+        width: 12px;
+        height: 12px;
+    }
+
+    .tl-dot.dot-primary {
+        width: 16px;
+        height: 16px;
+    }
+
+    .tl-content {
+        padding: 4px 0 4px var(--space-sm);
+    }
+
+    .tl-body {
+        padding: var(--space-sm);
+    }
+
+    .tl-body h3 {
+        font-size: 0.92rem;
+    }
+
+    .tl-body p {
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+
+    .tl-card-image {
+        height: 130px;
+    }
+
+    .tl-card-badge {
+        font-size: 0.55rem;
+        padding: 3px 10px;
+    }
+
+    .tl-card-duration {
+        font-size: 0.62rem;
+    }
+
+    .tl-checklist .check-item {
+        font-size: 0.75rem;
+    }
+
+    .tag {
+        font-size: 0.55rem;
+        padding: 2px 7px;
+    }
+
+    /* ---- Hero ---- */
+    .hero-line1 {
+        font-size: 2rem;
+    }
+
+    .hero-line2 {
+        font-size: 2.6rem;
+    }
+
+    .hero-location {
+        font-size: 0.9rem;
+    }
+
+    .hero-badge {
+        font-size: 0.62rem;
+    }
+
+    /* ---- Section titles ---- */
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .day-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .timeline-item {
+        grid-template-columns: 44px 16px 1fr;
+    }
+
+    .tl-time {
+        font-size: 0.85rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-grid {
+        grid-template-columns: 1fr;
     }
 }
